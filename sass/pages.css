@@ -5,6 +5,103 @@ body {
   background: #f6f6f6;
 }
 
+.loader {
+  background-color: white;
+  opacity: 0.9;
+  height: 100vh;
+  inset: 0;
+  position: fixed;
+  z-index: 10;
+  -webkit-animation: disappear 200ms 3s forwards;
+          animation: disappear 200ms 3s forwards;
+  overflow-y: hidden !important;
+  overflow-x: hidden !important;
+}
+
+.loader_spinner {
+  -webkit-animation: spin 1s infinite linear;
+          animation: spin 1s infinite linear;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  border: solid 2vmin transparent;
+  border-radius: 50%;
+  border-right-color: #9356dc;
+  border-top-color: #9356dc;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 20vmin;
+  left: calc(50% - 10vmin);
+  position: fixed;
+  top: calc(50% - 10vmin);
+  width: 20vmin;
+}
+
+.loader_spinner:before {
+  -webkit-animation: spin 2s infinite linear;
+          animation: spin 2s infinite linear;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  border: solid 2vmin transparent;
+  border-radius: 50%;
+  border-right-color: #ff79da;
+  border-top-color: #ff79da;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  content: "";
+  height: 16vmin;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 16vmin;
+}
+
+.loader_spinner:after {
+  -webkit-animation: spin 3s infinite linear;
+          animation: spin 3s infinite linear;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  border: solid 2vmin transparent;
+  border-radius: 50%;
+  border-right-color: #99e2d0;
+  border-top-color: #99e2d0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  content: "";
+  height: 12vmin;
+  left: 2vmin;
+  position: absolute;
+  top: 2vmin;
+  width: 12vmin;
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes disappear {
+  to {
+    opacity: 0;
+    z-index: 0;
+  }
+}
+
+@keyframes disappear {
+  to {
+    opacity: 0;
+    z-index: 0;
+  }
+}
+
 header {
   display: block;
   z-index: 10;
@@ -51,6 +148,7 @@ a {
   line-height: 1;
 }
 
+/***********COLORS************/
 /***********COLORS************/
 .footer {
   width: 100%;
