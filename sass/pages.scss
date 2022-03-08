@@ -3,6 +3,7 @@
 @import "_variables";
 @import "_footer";
 @import "_placeholder";
+@import "_animation";
 
 body {
   display: flex;
@@ -65,46 +66,49 @@ body {
       font-family: "Shrikhand", cursive;
     }
   }
-}
 
-.menu__grid {
-  display: grid;
-
-  &__bloc {
+  &__grid {
     display: grid;
-    grid-gap: 15px;
-  }
 
-  &__title h3 {
-    position: relative;
-    font-weight: 400;
-    text-transform: uppercase;
-    padding-bottom: 10px;
-    margin-top: 20px;
-
-    &::after {
-      content: "";
-      width: 3rem;
-      height: 0.25rem;
-      background-color: #99e2d0;
-      position: absolute;
-      left: 0;
-      bottom: 0;
+    &__bloc {
+      display: grid;
+      grid-gap: 15px;
     }
-  }
 
-  &__case {
-    @extend %shadow;
-    position: relative;
-    cursor: pointer;
-    overflow: hidden;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 70px;
-    border-radius: 15px;
-    background-color: white;
+    &__title h3 {
+      position: relative;
+      font-weight: 400;
+      text-transform: uppercase;
+      padding-bottom: 10px;
+      margin-top: 20px;
+
+      &::after {
+        content: "";
+        width: 3rem;
+        height: 0.25rem;
+        background-color: #99e2d0;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+    }
+
+    &__case {
+      @extend %shadow;
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 70px;
+      border-radius: 15px;
+      background-color: white;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
   }
 }
 
@@ -128,23 +132,47 @@ body {
 .menu__case__price {
   padding-right: 20px;
   font-weight: bold;
-  padding-left: 7px;
+  transition: 0.5s;
 }
 
-.menu__grid__case .validation__box {
-  display: none;
-  position: absolute;
-  background: $tertiary;
-  border-radius: 0 15px 15px 0;
-  right: 0px;
-  padding: 0 13px;
-  height: 100%;
+.menu__grid__case {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 
-  i {
-    font-size: 30px;
-    color: white;
-    transform: rotate(180deg);
-    animation: rotate 0.5s both;
+  .validation__box {
+    position: absolute;
+    background: $tertiary;
+    border-radius: 0 15px 15px 0;
+    right: 0px;
+    padding: 20px 13px;
+    height: 100%;
+    margin-right: -4rem;
+    @extend %shadow;
+    transition: 0.5s;
+
+    i {
+      font-size: 30px;
+      color: white;
+    }
+  }
+
+  &:hover {
+    .validation__box {
+      margin-right: 0;
+    }
+    .menu__case__price {
+      margin: 4rem;
+    }
+    i {
+      @include quarter-spin;
+      animation: quarter-spin 0.5s ease-in-out;
+    }
+  }
+  p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 }
 
