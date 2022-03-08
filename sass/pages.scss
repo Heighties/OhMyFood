@@ -1,3 +1,4 @@
+@import "_reset";
 @import "_style";
 @import "_variables";
 @import "_footer";
@@ -79,6 +80,7 @@ body {
     font-weight: 400;
     text-transform: uppercase;
     padding-bottom: 10px;
+    margin-top: 20px;
 
     &::after {
       content: "";

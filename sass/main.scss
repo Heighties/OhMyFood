@@ -1,3 +1,4 @@
+@import "_reset";
 @import "_style";
 @import "_variables";
 @import "_footer";
@@ -10,20 +11,12 @@
 h1 {
   display: block;
   font-size: 2em;
-  margin-block-start: 0.67em;
-  margin-block-end: 0.67em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
   font-weight: bold;
 }
 
 h3 {
   display: block;
   font-size: 1.17em;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
   font-weight: bold;
 }
 
@@ -40,7 +33,9 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: $grey;
+  background-color: $grey;
+  width: 100%;
+  padding: 10px 0 10px 0;
 }
 
 // .hero {
@@ -92,6 +87,8 @@ h3 {
       margin: 10px 20px;
       border-radius: 20px;
       position: relative;
+      padding: 20px 0px 20px 0px;
+      cursor: pointer;
     }
 
     &__number {
@@ -104,8 +101,11 @@ h3 {
     }
 
     &__icon {
-      color: $grey;
       margin: 0 20px;
+    }
+
+    &__text {
+      font-weight: bold;
     }
   }
 }
@@ -123,10 +123,8 @@ h3 {
 
   &__cards {
     display: grid;
-    grid-template-rows: repeat(4, 1fr);
     grid-template-columns: 1fr;
     grid-gap: 20px;
-    padding: 20px;
   }
 
   &__card {
@@ -137,7 +135,6 @@ h3 {
     align-items: flex-end;
     width: 100%;
     border-radius: 20px;
-    transform: scale(1);
     @extend %shadow;
 
     &-image {

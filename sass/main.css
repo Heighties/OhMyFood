@@ -1,3 +1,82 @@
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select {
+  margin: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
 /***********COLORS************/
 body {
   font-family: "Roboto", sans-serif;
@@ -122,6 +201,7 @@ a {
   font-family: "Shrikhand", cursive;
   margin: 0;
   color: black;
+  font-size: 25px;
 }
 
 .fa,
@@ -241,9 +321,9 @@ a {
   background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
   background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
   color: white;
-  padding: 10px 40px;
+  padding: 14px 0px;
   border-radius: 200px;
-  margin: 50px 0;
+  margin: 50px 35px;
   font-size: 18px;
   cursor: pointer;
 }
@@ -251,28 +331,12 @@ a {
 h1 {
   display: block;
   font-size: 2em;
-  -webkit-margin-before: 0.67em;
-          margin-block-start: 0.67em;
-  -webkit-margin-after: 0.67em;
-          margin-block-end: 0.67em;
-  -webkit-margin-start: 0px;
-          margin-inline-start: 0px;
-  -webkit-margin-end: 0px;
-          margin-inline-end: 0px;
   font-weight: bold;
 }
 
 h3 {
   display: block;
   font-size: 1.17em;
-  -webkit-margin-before: 1em;
-          margin-block-start: 1em;
-  -webkit-margin-after: 1em;
-          margin-block-end: 1em;
-  -webkit-margin-start: 0px;
-          margin-inline-start: 0px;
-  -webkit-margin-end: 0px;
-          margin-inline-end: 0px;
   font-weight: bold;
 }
 
@@ -304,7 +368,9 @@ h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #7a7a7a;
+  background-color: #e2e2e2;
+  width: 100%;
+  padding: 10px 0 10px 0;
 }
 
 .process__contain {
@@ -369,6 +435,8 @@ h3 {
   margin: 10px 20px;
   border-radius: 20px;
   position: relative;
+  padding: 20px 0px 20px 0px;
+  cursor: pointer;
 }
 
 .process__contain .process__number {
@@ -382,8 +450,11 @@ h3 {
 }
 
 .process__contain .process__icon {
-  color: #7a7a7a;
   margin: 0 20px;
+}
+
+.process__contain .process__text {
+  font-weight: bold;
 }
 
 .restaurant {
@@ -412,12 +483,9 @@ h3 {
 .restaurant__cards {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (1fr)[4];
-      grid-template-rows: repeat(4, 1fr);
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
   grid-gap: 20px;
-  padding: 20px;
 }
 
 .restaurant__card {
@@ -437,8 +505,6 @@ h3 {
           align-items: flex-end;
   width: 100%;
   border-radius: 20px;
-  -webkit-transform: scale(1);
-          transform: scale(1);
 }
 
 .restaurant__card-image {
