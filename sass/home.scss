@@ -4,7 +4,6 @@
 @import "_footer";
 @import "_placeholder";
 @import "_animation";
-@import "_responsive";
 
 .header {
   @extend %header;
@@ -213,7 +212,7 @@
 
   .restaurant__cards {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    // grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
   }

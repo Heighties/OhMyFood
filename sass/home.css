@@ -477,40 +477,6 @@ h3 {
           animation: slide-down 3s;
 }
 
-@media screen and (min-width: 768px) {
-  .img__image {
-    margin-top: 0;
-  }
-  .menu {
-    margin-top: -60px;
-  }
-  .menu__grid {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
-    -ms-grid-rows: 1fr;
-        grid-template-rows: 1fr;
-    grid-gap: 15px;
-  }
-  .footer__bloc {
-    margin-bottom: 15px;
-  }
-  .footer__bloc-links {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    max-width: 900px;
-  }
-}
-
 .main {
   margin: 0;
   padding: 0;
@@ -796,8 +762,6 @@ h3 {
   .restaurant__cards {
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
