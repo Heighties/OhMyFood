@@ -1,0 +1,27 @@
+@media screen and (min-width: 800px) {
+  .img__image {
+    margin-top: 0;
+  }
+
+  .menu {
+    margin-top: -60px;
+  }
+
+  .menu__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 15px;
+  }
+
+  .footer__bloc {
+    margin-bottom: 15px;
+  }
+
+  .footer__bloc-links {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    max-width: 900px;
+  }
+}

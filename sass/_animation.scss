@@ -137,7 +137,8 @@
 
   svg {
     overflow: visible;
-    width: 2rem;
+    width: 1.5rem;
+    height: 2rem;
   }
 
   path {
@@ -179,4 +180,29 @@
     fill: url(#text-fill);
     stroke: url(#text-fill);
   }
+}
+
+/*************SLIDE**************/
+
+@keyframes slide-down {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+#case-1 {
+  animation: slide-down 1s;
+}
+
+#case-2 {
+  animation: slide-down 2s;
+}
+
+#case-3 {
+  animation: slide-down 3s;
 }

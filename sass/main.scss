@@ -4,21 +4,10 @@
 @import "_footer";
 @import "_placeholder";
 @import "_animation";
+@import "_responsive";
 
 .header {
   @extend %header;
-}
-
-h1 {
-  display: block;
-  font-size: 2em;
-  font-weight: bold;
-}
-
-h3 {
-  display: block;
-  font-size: 1.17em;
-  font-weight: bold;
 }
 
 .main {
@@ -39,9 +28,9 @@ h3 {
   padding: 10px 0 10px 0;
 }
 
-// .hero {
-//   justify-content: center;
-//   align-items: center;
+.hero {
+  margin: 0px 20px 0px 20px;
+}
 
 // &__container {
 //   align-items: center;
@@ -102,7 +91,7 @@ h3 {
     }
 
     &__icon {
-      margin: 0 20px;
+      margin: 0px 20px 0 30px;
     }
 
     &__text {
@@ -114,7 +103,8 @@ h3 {
 .restaurant {
   margin: 0;
   background: #f6f6f6;
-  padding: 20px;
+  padding: 20px 20px 50px 20px;
+  width: 100%;
   max-width: 1200px;
   display: flex;
   justify-content: center;
@@ -123,6 +113,7 @@ h3 {
   align-items: flex-start;
 
   &__cards {
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 20px;
@@ -158,6 +149,9 @@ h3 {
       background: $tertiary;
       top: 20px;
       right: 20px;
+      height: 30px;
+      width: 80px;
+      border-radius: 2px;
 
       p {
         color: $new_card;
@@ -184,5 +178,28 @@ h3 {
 
   &-name {
     font-weight: bold;
+  }
+
+  &-hearts {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .process__steps {
+    // justify-content: center;
+    flex-direction: row !important;
+  }
+
+  .process__step {
+    min-width: 350px;
+    width: 100%;
+  }
+
+  .restaurant__cards {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
   }
 }

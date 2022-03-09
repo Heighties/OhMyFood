@@ -4,6 +4,7 @@
 @import "_footer";
 @import "_placeholder";
 @import "_animation";
+@import "_responsive";
 
 body {
   display: flex;
@@ -57,6 +58,7 @@ body {
   background-color: $background_color;
 
   &__header {
+    margin-top: 20px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -64,6 +66,10 @@ body {
 
     &__title {
       font-family: "Shrikhand", cursive;
+    }
+
+    &__heart {
+      margin-right: 20px;
     }
   }
 
@@ -181,9 +187,9 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
+  padding: 40px 0px 60px 0px;
 }
 
 .menu__button {
-  @extend %shadow;
   @extend %btn;
 }
