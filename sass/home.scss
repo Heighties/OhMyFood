@@ -25,20 +25,35 @@
   align-items: center;
   background-color: $grey;
   width: 100%;
-  padding: 10px 0 10px 0;
+  padding: 15px 0 15px 0;
+  gap: 15px;
+  font-weight: bold;
+  font-size: 15px;
 }
 
 .hero {
   margin: 0px 20px 0px 20px;
-}
 
-// &__container {
-//   align-items: center;
-// }
-// }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 0 30px 0;
+  }
 
-.hero__button {
-  @extend %btn;
+  &__title {
+    text-align: center;
+  }
+
+  &__text {
+    text-align: center;
+  }
+
+  &__button {
+    @extend %btn;
+    width: 250px;
+    align-self: center;
+  }
 }
 
 .process__contain {
@@ -92,6 +107,7 @@
 
     &__icon {
       margin: 0px 20px 0 30px;
+      color: $icon-color;
     }
 
     &__text {
@@ -187,7 +203,6 @@
 
 @media screen and (min-width: 1100px) {
   .process__steps {
-    // justify-content: center;
     flex-direction: row !important;
   }
 
