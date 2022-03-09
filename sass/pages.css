@@ -131,47 +131,6 @@ a {
   line-height: 1;
 }
 
-.restaurant__block-hearts,
-.menu__header__heart {
-  position: relative;
-  width: 50px;
-  height: 50px;
-}
-
-.restaurant__block-hearts .heart,
-.menu__header__heart .heart {
-  position: absolute;
-  font-size: 2rem;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
-
-.restaurant__block-hearts .heart-full,
-.menu__header__heart .heart-full {
-  background-clip: text;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
-  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  z-index: 10;
-  opacity: 0;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-
-.restaurant__block-hearts .heart-full:hover,
-.menu__header__heart .heart-full:hover {
-  opacity: 1;
-}
-
-.restaurant__block-hearts .heart-empty,
-.menu__header__heart .heart-empty {
-  color: black;
-}
-
 /***********COLORS************/
 /***********COLORS************/
 .footer {
@@ -389,46 +348,77 @@ a {
 
 /***********VALIDATION BOX************/
 /***************HEARTS*******************/
-.restaurant__block-hearts,
-.menu__header__heart {
-  position: relative;
-  width: 50px;
-  height: 50px;
-}
-
-.restaurant__block-hearts .heart,
-.menu__header__heart .heart {
-  position: absolute;
-  font-size: 2rem;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
+.heart {
+  fill: transparent;
+  stroke: black;
+  stroke-width: 20;
   cursor: pointer;
+  position: relative;
 }
 
-.restaurant__block-hearts .heart-full,
-.menu__header__heart .heart-full {
-  background-clip: text;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
-  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  z-index: 10;
-  opacity: 0;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+.heart svg {
+  overflow: visible;
+  width: 2rem;
 }
 
-.restaurant__block-hearts .heart-full:hover,
-.menu__header__heart .heart-full:hover {
-  opacity: 1;
+.heart path {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 1550;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
 }
 
-.restaurant__block-hearts .heart-empty,
-.menu__header__heart .heart-empty {
-  color: black;
+.heart .heart-full {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  stroke: none;
+}
+
+.heart .heart-empty:hover path {
+  -webkit-animation: filling-animation 2s ease-in-out forwards;
+          animation: filling-animation 2s ease-in-out forwards;
+}
+
+@-webkit-keyframes filling-animation {
+  60% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    fill: url(#text-fill);
+  }
+  80% {
+    fill: url(#text-fill);
+    stroke: url(#text-fill);
+  }
+  90% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    fill: url(#text-fill);
+    stroke: url(#text-fill);
+  }
+}
+
+@keyframes filling-animation {
+  60% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    fill: url(#text-fill);
+  }
+  80% {
+    fill: url(#text-fill);
+    stroke: url(#text-fill);
+  }
+  90% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    fill: url(#text-fill);
+    stroke: url(#text-fill);
+  }
 }
 
 body {
