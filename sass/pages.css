@@ -254,8 +254,8 @@ h3 {
   inset: 0;
   position: fixed;
   z-index: 10;
-  -webkit-animation: disappear 200ms 3s forwards;
-          animation: disappear 200ms 3s forwards;
+  -webkit-animation: disappear 200ms 2s forwards;
+          animation: disappear 200ms 2s forwards;
   overflow-y: hidden !important;
   overflow-x: hidden !important;
 }
