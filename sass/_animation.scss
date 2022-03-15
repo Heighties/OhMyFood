@@ -163,11 +163,14 @@
 @keyframes filling-animation {
   // 0% {
   // }
-  // 30% {
-  // }
+  30% {
+    transform: scale(1);
+    fill: url(#text-fill);
+  }
   60% {
     transform: scale(1);
     fill: url(#text-fill);
+    stroke: url(#text-fill);
   }
   80% {
     fill: url(#text-fill);
