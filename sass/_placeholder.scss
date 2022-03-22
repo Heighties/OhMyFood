@@ -31,7 +31,8 @@
 
   &:hover {
     // background: lighten($grad_color, 20);
-    filter: brightness(110%);
+    // filter: brightness(110%);
     @extend %shadow_hover;
+    background: $grad_color_lighter;
   }
 }

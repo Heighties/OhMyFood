@@ -1,10 +1,9 @@
-@import "_reset";
-@import "_style";
-@import "_variables";
-@import "_footer";
-@import "_placeholder";
-@import "_animation";
-@import "_responsive";
+// @import "_reset";
+// @import "_style";
+// @import "_variables";
+// @import "_footer";
+// @import "_placeholder";
+// @import "_animation";
 
 body {
   display: flex;
@@ -167,7 +166,7 @@ body {
       margin-right: 0;
     }
     .menu__case__price {
-      margin: 4rem;
+      margin: 0 4rem 0 1rem;
     }
     i {
       @include quarter-spin;
@@ -192,3 +191,5 @@ body {
 .menu__button {
   @extend %btn;
 }
+
+// @import "_responsive";

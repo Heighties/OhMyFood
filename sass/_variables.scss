@@ -9,3 +9,10 @@ $icon-color: #969696;
 $grad_color: linear-gradient(180deg, $primary 0%, $secondary 100%);
 $footer_color: #353535;
 $new_card: #1b6150;
+$primary_lighter: #fd89dc;
+$secondary_lighter: #9d6fd4;
+$grad_color_lighter: linear-gradient(
+  180deg,
+  $primary_lighter 0%,
+  $secondary_lighter 100%
+);

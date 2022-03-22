@@ -6,7 +6,7 @@
   height: 100vh;
   inset: 0;
   position: fixed;
-  z-index: 10;
+  z-index: 100;
   animation: disappear 200ms 2s forwards;
   overflow-y: hidden !important;
   overflow-x: hidden !important;
@@ -153,21 +153,22 @@
     right: 0;
     z-index: -1;
     stroke: none;
+    opacity: 0;
   }
 
   .heart-empty:hover path {
-    animation: filling-animation 2s ease-in-out forwards;
+    animation: filling-animation 1s ease-in-out forwards;
   }
 }
 
 @keyframes filling-animation {
   // 0% {
   // }
-  30% {
+  0% {
     transform: scale(1);
     fill: url(#text-fill);
   }
-  60% {
+  10% {
     transform: scale(1);
     fill: url(#text-fill);
     stroke: url(#text-fill);
@@ -199,13 +200,13 @@
 }
 
 #case-1 {
-  animation: slide-down 1s;
+  animation: slide-down 0.5s;
 }
 
 #case-2 {
-  animation: slide-down 2s;
+  animation: slide-down 1s;
 }
 
 #case-3 {
-  animation: slide-down 3s;
+  animation: slide-down 1.5s;
 }
