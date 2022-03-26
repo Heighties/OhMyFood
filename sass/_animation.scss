@@ -78,7 +78,7 @@
 
   100% {
     opacity: 0;
-    z-index: 0;
+    z-index: -1;
   }
 }
 
@@ -98,36 +98,6 @@
 
 /***************HEARTS*******************/
 
-// .restaurant__block-hearts,
-// .menu__header__heart {
-//   width: 20px;
-//   height: 20px;
-
-//   .heart {
-//     position: absolute;
-//     font-size: 2rem;
-//     width: 100%;
-//     height: 100%;
-//     top: 0;
-//     left: 0;
-//     cursor: pointer;
-
-//     &-full {
-//       @include heart-color;
-//       opacity: 0;
-//       transition: all 0.5s ease-in-out;
-
-//       &:hover {
-//         opacity: 1;
-//       }
-//     }
-
-//     &-empty {
-//       color: black;
-//     }
-//   }
-// }
-
 .heart {
   fill: transparent;
   stroke: black;
@@ -143,21 +113,27 @@
 
   path {
     stroke-dashoffset: 0;
-    stroke-dasharray: 1550;
+    // stroke-dasharray: 1550;
     transform-origin: bottom;
   }
 
-  .heart-full {
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: -1;
-    stroke: none;
-    opacity: 0;
+  &-empty {
+    z-index: 10;
+    stroke: black;
   }
 
-  .heart-empty:hover path {
-    animation: filling-animation 1s ease-in-out forwards;
+  &-full {
+    position: absolute;
+    // margin-left: -10px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    stroke: transparent;
+    // opacity: 0;
+    fill: transparent;
+    &:hover path {
+      animation: filling-animation 0.2s ease-in-out forwards;
+    }
   }
 }
 
@@ -165,22 +141,25 @@
   // 0% {
   // }
   0% {
-    transform: scale(1);
-    fill: url(#text-fill);
+    // transform: scale(1);
+    // fill: url(#text-fill);
+    stroke: black;
   }
   10% {
-    transform: scale(1);
+    transform: scale(0.2);
     fill: url(#text-fill);
-    stroke: url(#text-fill);
+    stroke: black;
   }
   80% {
+    transform: scale(0.6);
     fill: url(#text-fill);
     stroke: url(#text-fill);
   }
   90% {
-    transform: scale(1);
+    transform: scale(0.8);
   }
   100% {
+    transform: scale(1);
     fill: url(#text-fill);
     stroke: url(#text-fill);
   }
@@ -199,14 +178,20 @@
   }
 }
 
-#case-1 {
-  animation: slide-down 0.5s;
-}
+// #case-1 {
+//   animation: slide-down 0.5s;
+// }
 
-#case-2 {
-  animation: slide-down 1s;
-}
+// #case-2 {
+//   animation: slide-down 1s;
+// }
 
-#case-3 {
-  animation: slide-down 1.5s;
+// #case-3 {
+//   animation: slide-down 1.5s;
+// }
+
+@for $i from 1 to 10 {
+  #case-#{$i} {
+    animation: slide-down $i * 0.5s;
+  }
 }
