@@ -255,11 +255,6 @@ th {
           transform-origin: center;
 }
 
-.heart-empty {
-  z-index: 10;
-  stroke: black;
-}
-
 .heart-full {
   position: absolute;
   left: 0;
@@ -275,9 +270,6 @@ th {
 }
 
 @-webkit-keyframes filling-animation {
-  0% {
-    stroke: black;
-  }
   10% {
     -webkit-transform: scale(0.2);
             transform: scale(0.2);
@@ -303,9 +295,6 @@ th {
 }
 
 @keyframes filling-animation {
-  0% {
-    stroke: black;
-  }
   10% {
     -webkit-transform: scale(0.2);
             transform: scale(0.2);
@@ -792,12 +781,12 @@ body {
 
 .img {
   width: 100%;
-  height: 50vh;
+  height: 60vw;
+  max-height: 25rem;
   background-color: white;
 }
 
 .img__image {
-  margin-top: -80px;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -819,7 +808,7 @@ body {
 }
 
 .menu {
-  margin-top: -200px;
+  margin-top: -30px;
   padding: 0 20px;
   width: 100%;
   max-width: 1230px;

@@ -109,10 +109,10 @@
     transform-origin: center;
   }
 
-  &-empty {
-    z-index: 10;
-    stroke: black;
-  }
+  // &-empty {
+  //   z-index: 10;
+  //   stroke: black;
+  // }
 
   &-full {
     position: absolute;
@@ -128,9 +128,6 @@
 }
 
 @keyframes filling-animation {
-  0% {
-    stroke: black;
-  }
   10% {
     transform: scale(0.2);
     fill: url(#text-fill);
