@@ -8,8 +8,6 @@
   position: fixed;
   z-index: 100;
   animation: disappear 200ms 2s forwards;
-  overflow-y: hidden !important;
-  overflow-x: hidden !important;
 
   &__spinner {
     animation: spin 1s infinite linear;
@@ -24,7 +22,6 @@
     position: fixed;
     top: calc(50% - 10vmin);
     width: 20vmin;
-    // z-index: 100;
 
     &:before {
       animation: spin 2s infinite linear;
@@ -89,10 +86,6 @@
     0% {
       transform: rotate(-270deg);
     }
-
-    100% {
-      transform: rotate() 0;
-    }
   }
 }
 
@@ -113,8 +106,7 @@
 
   path {
     stroke-dashoffset: 0;
-    // stroke-dasharray: 1550;
-    transform-origin: bottom;
+    transform-origin: center;
   }
 
   &-empty {
@@ -124,25 +116,19 @@
 
   &-full {
     position: absolute;
-    // margin-left: -10px;
     left: 0;
     right: 0;
     z-index: 10;
     stroke: transparent;
-    // opacity: 0;
     fill: transparent;
     &:hover path {
-      animation: filling-animation 0.2s ease-in-out forwards;
+      animation: filling-animation 0.3s ease-in-out forwards;
     }
   }
 }
 
 @keyframes filling-animation {
-  // 0% {
-  // }
   0% {
-    // transform: scale(1);
-    // fill: url(#text-fill);
     stroke: black;
   }
   10% {
@@ -150,7 +136,7 @@
     fill: url(#text-fill);
     stroke: black;
   }
-  80% {
+  60% {
     transform: scale(0.6);
     fill: url(#text-fill);
     stroke: url(#text-fill);
@@ -159,7 +145,7 @@
     transform: scale(0.8);
   }
   100% {
-    transform: scale(1);
+    transform: scale(1.02);
     fill: url(#text-fill);
     stroke: url(#text-fill);
   }
@@ -177,18 +163,6 @@
     opacity: 1;
   }
 }
-
-// #case-1 {
-//   animation: slide-down 0.5s;
-// }
-
-// #case-2 {
-//   animation: slide-down 1s;
-// }
-
-// #case-3 {
-//   animation: slide-down 1.5s;
-// }
 
 @for $i from 1 to 10 {
   #case-#{$i} {
