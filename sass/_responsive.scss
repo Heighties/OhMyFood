@@ -1,4 +1,16 @@
 @media screen and (min-width: 768px) {
+  .process__contain {
+    .process__steps {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 30px;
+    }
+    .process__step {
+      max-width: 350px;
+      width: 100%;
+    }
+  }
+
   .footer__bloc {
     margin-bottom: 15px;
 
@@ -12,16 +24,6 @@
 }
 
 @media screen and (min-width: 900px) {
-  .process__contain {
-    .process__steps {
-      flex-direction: row;
-    }
-    .process__step {
-      max-width: 350px;
-      width: 100%;
-    }
-  }
-
   .restaurant__cards {
     display: grid;
     grid-template-columns: 1fr 1fr;

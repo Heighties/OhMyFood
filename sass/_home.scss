@@ -62,15 +62,14 @@
   flex-direction: column;
 
   .process {
-    width: 95%;
+    width: 100%;
     max-width: 1200px;
-    padding: 0;
+    padding: 0px 25px;
     display: flex;
     flex-direction: column;
 
     &__title {
-      margin-left: 10px;
-      padding: 10px 0px 20px 0px;
+      margin: 10px 0px 20px;
     }
 
     &__steps {
@@ -86,7 +85,7 @@
       background: $background_color;
       height: auto;
       width: auto;
-      margin: 10px 20px;
+      margin: 10px 0px;
       border-radius: 20px;
       position: relative;
       padding: 20px 0px 20px 0px;
@@ -123,7 +122,7 @@
 .restaurant {
   margin: 0;
   background: $background_color;
-  padding: 20px 20px 50px 20px;
+  padding: 20px 25px 50px;
   width: 100%;
   max-width: 1200px;
   display: flex;

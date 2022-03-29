@@ -109,11 +109,6 @@
     transform-origin: center;
   }
 
-  // &-empty {
-  //   z-index: 10;
-  //   stroke: black;
-  // }
-
   &-full {
     position: absolute;
     left: 0;
@@ -131,16 +126,8 @@
   10% {
     transform: scale(0.2);
     fill: url(#text-fill);
-    stroke: black;
   }
-  60% {
-    transform: scale(0.6);
-    fill: url(#text-fill);
-    stroke: url(#text-fill);
-  }
-  90% {
-    transform: scale(0.8);
-  }
+
   100% {
     transform: scale(1.02);
     fill: url(#text-fill);

@@ -274,17 +274,6 @@ th {
     -webkit-transform: scale(0.2);
             transform: scale(0.2);
     fill: url(#text-fill);
-    stroke: black;
-  }
-  60% {
-    -webkit-transform: scale(0.6);
-            transform: scale(0.6);
-    fill: url(#text-fill);
-    stroke: url(#text-fill);
-  }
-  90% {
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8);
   }
   100% {
     -webkit-transform: scale(1.02);
@@ -299,17 +288,6 @@ th {
     -webkit-transform: scale(0.2);
             transform: scale(0.2);
     fill: url(#text-fill);
-    stroke: black;
-  }
-  60% {
-    -webkit-transform: scale(0.6);
-            transform: scale(0.6);
-    fill: url(#text-fill);
-    stroke: url(#text-fill);
-  }
-  90% {
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8);
   }
   100% {
     -webkit-transform: scale(1.02);
@@ -555,9 +533,9 @@ h3 {
 }
 
 .process__contain .process {
-  width: 95%;
+  width: 100%;
   max-width: 1200px;
-  padding: 0;
+  padding: 0px 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -568,8 +546,7 @@ h3 {
 }
 
 .process__contain .process__title {
-  margin-left: 10px;
-  padding: 10px 0px 20px 0px;
+  margin: 10px 0px 20px;
 }
 
 .process__contain .process__steps {
@@ -595,7 +572,7 @@ h3 {
   background: #f6f6f6;
   height: auto;
   width: auto;
-  margin: 10px 20px;
+  margin: 10px 0px;
   border-radius: 20px;
   position: relative;
   padding: 20px 0px 20px 0px;
@@ -632,7 +609,7 @@ h3 {
 .restaurant {
   margin: 0;
   background: #f6f6f6;
-  padding: 20px 20px 50px 20px;
+  padding: 20px 25px 50px;
   width: 100%;
   max-width: 1200px;
   display: -webkit-box;
@@ -1058,6 +1035,20 @@ body {
 }
 
 @media screen and (min-width: 768px) {
+  .process__contain .process__steps {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 30px;
+  }
+  .process__contain .process__step {
+    max-width: 350px;
+    width: 100%;
+  }
   .footer__bloc {
     margin-bottom: 15px;
   }
@@ -1077,16 +1068,6 @@ body {
 }
 
 @media screen and (min-width: 900px) {
-  .process__contain .process__steps {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  .process__contain .process__step {
-    max-width: 350px;
-    width: 100%;
-  }
   .restaurant__cards {
     display: -ms-grid;
     display: grid;
@@ -1126,4 +1107,3 @@ body {
     max-width: 900px;
   }
 }
-/*# sourceMappingURL=main.css.map */
