@@ -150,6 +150,6 @@
 
 @for $i from 1 to 10 {
   #case-#{$i} {
-    animation: slide-down $i * 0.5s;
+    animation: slide-down $i * 0.7s;
   }
 }
