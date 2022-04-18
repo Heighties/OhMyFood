@@ -1,8 +1,0 @@
-@mixin heart-color {
-  background-clip: text;
-  background: $grad_color;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  z-index: 10;
-}
